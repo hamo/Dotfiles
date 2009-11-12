@@ -1,12 +1,12 @@
-;;显示时间
+;;show time
 (display-time)
-;;显示行号
+;;show line and column number
 (line-number-mode t)
 (column-number-mode t)
 (show-paren-mode t)
-;;设置TAB宽度为4
+;;
 (setq default-tab-width 4) 
-;;以下设置缩进 
+;; 
 (setq c-indent-level 4)
 (setq c-continued-statement-offset 4)
 (setq c-brace-offset -4)
