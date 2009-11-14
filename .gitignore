@@ -1,0 +1,3 @@
+*.bak
+.emacs.d/auto-save-list/*
+

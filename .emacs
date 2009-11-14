@@ -3,13 +3,10 @@
 ;;show line and column number
 (line-number-mode t)
 (column-number-mode t)
-(show-paren-mode t)
+;;(show-paren-mode t)
 
 ;; 去掉滚动条
 (set-scroll-bar-mode nil)
-
-;;关闭开启画面
-(setq inhibit-startup-message t) 
 
 ;;不产生备份文件
 (setq make-backup-files nil)
