@@ -3,7 +3,8 @@
 ;;show line and column number
 (line-number-mode t)
 (column-number-mode t)
-;;(show-paren-mode t)
+
+(show-paren-mode t)
 
 ;; 去掉滚动条
 (set-scroll-bar-mode nil)
