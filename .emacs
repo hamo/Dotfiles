@@ -6,10 +6,8 @@
 
 (show-paren-mode t)
 
-;; 去掉滚动条
 (set-scroll-bar-mode nil)
 
-;;不产生备份文件
 (setq make-backup-files nil)
 
 ;; Load CEDET
