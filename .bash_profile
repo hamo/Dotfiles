@@ -1,3 +1,3 @@
-export EDITOR=vim
+export EDITOR="emacsclient -t"
 
 . $HOME/.bashrc
