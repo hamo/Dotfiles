@@ -74,7 +74,7 @@ nmap <leader>fe :Sexplore!<cr>
 
 if has("gui_running")
     colorscheme oceandeep
-    set guifont=YaHei\ Consolas\ Hybrid   
+    set guifont=YaHei\ Consolas\ Hybrid\ 12 
 else
     set background=dark
     colorscheme desert
