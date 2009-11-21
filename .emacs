@@ -19,3 +19,6 @@
 ;; emacs-python-mode
 (autoload 'python-mode "python-mode.el" "Python mode." t)
 (setq auto-mode-alist (append '(("/*.\.py$" . python-mode)) auto-mode-alist))
+
+;; w3m
+(require 'w3m-load)
