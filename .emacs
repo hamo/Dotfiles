@@ -22,3 +22,6 @@
 
 ;; w3m
 (require 'w3m-load)
+
+;; color-theme
+(require 'color-theme)
