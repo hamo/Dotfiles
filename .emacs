@@ -3,7 +3,7 @@
 ;;show line and column number
 (line-number-mode t)
 (column-number-mode t)
-
+(tool-bar-mode nil)
 (show-paren-mode t)
 (set-scroll-bar-mode nil)
 (setq make-backup-files nil)
