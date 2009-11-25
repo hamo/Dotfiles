@@ -14,7 +14,7 @@
 ;; color-theme
 (require 'color-theme)
 (color-theme-initialize)
-(color-theme-comidia)
+(color-theme-taming-mr-arneson)
 
 ;; Load CEDET
 (load-file "/usr/share/emacs/site-lisp/cedet/common/cedet.el")
