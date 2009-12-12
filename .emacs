@@ -8,6 +8,17 @@
 (set-scroll-bar-mode nil)
 (setq make-backup-files nil)
 
+(setq default-tab-width 4) 
+(setq c-indent-level 4)
+(setq c-continued-statement-offset 4)
+(setq c-brace-offset -4)
+(setq c-argdecl-indent 4)
+(setq c-label-offset -4)
+(setq c-basic-offset 4)
+(global-set-key "\C-m" 'reindent-then-newline-and-indent)
+(setq indent-tabs-mode nil)
+(setq standard-indent 4)
+
 ;; w3m
 (require 'w3m-load)
 
