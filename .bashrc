@@ -13,3 +13,6 @@ if [ $(/usr/bin/tty) == '/dev/tty6' ] && [ $( pgrep -f X | wc -l ) == 0 ]
 then
     exec startx
 fi
+
+# start keychain
+eval 'keychain --eval id_rsa 7CA25BED'
