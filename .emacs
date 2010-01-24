@@ -40,3 +40,7 @@
 ;; emacs-haskell-mode
 (autoload 'haskell-mode "haskell-mode.el" "Haskell mode." t)
 (setq auto-mode-alist (append '(("/*.\.hs$" . haskell-mode)) auto-mode-alist))
+
+;; auctex
+(load "auctex.el" nil t t)
+(load "preview-latex.el" nil t t)
