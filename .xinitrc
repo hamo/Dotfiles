@@ -45,4 +45,4 @@ export GTK_IM_MODULE=ibus
 export QT_IM_MODULE=ibus
 
 # start some nice programs
-exec startkde
+exec ck-launch-session startkde
