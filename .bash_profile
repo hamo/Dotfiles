@@ -11,7 +11,7 @@ fi
 #eval 'keychain --eval id_rsa 7CA25BED'
 
 # if log in at tty6, start X automatically
-if [ $(/usr/bin/tty) == '/dev/tty6' ] && [ $( pgrep -f ^X$ | wc -l ) == 0 ]
+if [ $(/usr/bin/tty) == '/dev/tty6' ] && [ $( pgrep ^X$ | wc -l ) == 0 ]
 then
     exec startx
 fi
