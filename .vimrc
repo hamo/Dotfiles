@@ -35,7 +35,7 @@ set mouse=a
 set showmatch 
 set matchtime=2  
 set autoread 
-set autochdir  
+"set autochdir  
 set backspace=2   
 set incsearch  
 set hlsearch  
