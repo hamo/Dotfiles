@@ -10,7 +10,7 @@ export EDITOR="vim"
 # if log in at tty6, start X automatically
 if [ $(/usr/bin/tty) == '/dev/tty6' ] && [ $( pgrep ^X$ | wc -l ) == 0 ]
 then
-    exec startx
+    exec startx > /dev/null 2>&1
 fi
 
 . $HOME/.bashrc
