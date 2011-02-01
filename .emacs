@@ -19,6 +19,9 @@
 (setq indent-tabs-mode nil)
 (setq standard-indent 4)
 
+;; start emacs as a server
+(server-start)
+
 ;; w3m
 (require 'w3m-load)
 
