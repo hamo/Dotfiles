@@ -8,6 +8,10 @@
 (set-scroll-bar-mode nil)
 (setq make-backup-files nil)
 
+;; set default font and size
+(set-face-attribute 'default nil :family "YaHei Consolas Hybrid"
+                                 :height 120)
+
 (setq default-tab-width 4) 
 (setq c-indent-level 4)
 (setq c-continued-statement-offset 4)
