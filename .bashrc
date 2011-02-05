@@ -6,9 +6,3 @@ alias u="cd .."
 
 # Check for an interactive session
 [ -z "$PS1" ] && return
-
-# set chromium as the default browser
-if [ -n "$DISPLAY" ]; then
-	BROWSER=chromium
-fi
-
