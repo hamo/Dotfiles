@@ -37,6 +37,10 @@
 (autoload 'haskell-mode "haskell-mode.el" "Haskell mode." t)
 (setq auto-mode-alist (append '(("/*.\.hs$" . haskell-mode)) auto-mode-alist))
 
+;; emacs-php-mode
+(autoload 'php-mode "php-mode.el" "Php mode." t)
+(setq auto-mode-alist (append '(("/*.\.php[345]?$" . php-mode)) auto-mode-alist))
+
 ;; auctex
 (load "auctex.el" nil t t)
 (load "preview-latex.el" nil t t)
