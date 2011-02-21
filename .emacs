@@ -24,10 +24,10 @@
 (color-theme-taming-mr-arneson)
 
 ;; Load CEDET
-(load-file "/usr/share/emacs/site-lisp/cedet/common/cedet.el")
+;; (load-file "cedet.el")
 ;; ecb
-(add-to-list 'load-path "/usr/share/emacs/site-lisp/ecb")
-(require 'ecb)
+;; (add-to-list 'load-path "/usr/share/emacs/site-lisp/ecb")
+;; (require 'ecb)
 
 ;; emacs-python-mode
 (autoload 'python-mode "python-mode.el" "Python mode." t)
