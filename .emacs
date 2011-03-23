@@ -23,24 +23,6 @@
 (color-theme-initialize)
 (color-theme-taming-mr-arneson)
 
-;; Load CEDET
-;; (load-file "cedet.el")
-;; ecb
-;; (add-to-list 'load-path "/usr/share/emacs/site-lisp/ecb")
-;; (require 'ecb)
-
-;; emacs-python-mode
-(autoload 'python-mode "python-mode.el" "Python mode." t)
-(setq auto-mode-alist (append '(("/*.\.py$" . python-mode)) auto-mode-alist))
-
-;; emacs-haskell-mode
-(autoload 'haskell-mode "haskell-mode.el" "Haskell mode." t)
-(setq auto-mode-alist (append '(("/*.\.hs$" . haskell-mode)) auto-mode-alist))
-
-;; emacs-php-mode
-(autoload 'php-mode "php-mode.el" "Php mode." t)
-(setq auto-mode-alist (append '(("/*.\.php[345]?$" . php-mode)) auto-mode-alist))
-
 ;; auctex
 (load "auctex.el" nil t t)
 (load "preview-latex.el" nil t t)
