@@ -23,10 +23,6 @@
 (color-theme-initialize)
 (color-theme-taming-mr-arneson)
 
-;; auctex
-;;(load "auctex.el" nil t t)
-;;(load "preview-latex.el" nil t t)
-
 ;; emms
 (require 'emms-setup)
 (emms-standard)
