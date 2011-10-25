@@ -4,3 +4,8 @@
 [user]
 	name = Yang Bai
 	email = hamo.by@gmail.com
+[sendemail]
+        smtpencryption = tls
+        smtpserver = smtp.gmail.com
+        smtpuser = hamo.by@gmail.com
+        smtpserverport = 587
