@@ -9,3 +9,5 @@
         smtpserver = smtp.gmail.com
         smtpuser = hamo.by@gmail.com
         smtpserverport = 587
+[alias]
+        lc  = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset %Cblue%cn%Creset' --abbrev-commit --date=relative
