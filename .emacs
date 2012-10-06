@@ -18,7 +18,3 @@
 ;; color-theme
 (color-theme-initialize)
 (color-theme-taming-mr-arneson)
-
-;; emms
-(emms-standard)
-(emms-default-players)
