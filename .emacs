@@ -3,13 +3,13 @@
 ;;show line and column number
 (line-number-mode t)
 (column-number-mode t)
-(tool-bar-mode nil)
+(tool-bar-mode 0)
 (show-paren-mode t)
-(set-scroll-bar-mode nil)
-(setq make-backup-files nil)
+(scroll-bar-mode 0)
+(setq make-backup-files 0)
 
 ;; set default font and size
-(set-face-attribute 'default nil :family "YaHei Consolas Hybrid"
+(set-face-attribute 'default  0  :family "YaHei Consolas Hybrid"
                                  :height 120)
 
 ;; start emacs as a server
