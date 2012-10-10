@@ -18,3 +18,14 @@
 ;; color-theme
 (color-theme-initialize)
 (color-theme-taming-mr-arneson)
+
+;; ERC
+;;;;erc notify send;;;;
+(require 'notifications)
+(defun erc-global-notify (match-type nick message)
+  "Notify when a message is recieved."
+  (notifications-notify
+    :body message
+    :title (car (split-string nick "!"))
+    :urgency 'normal))
+(add-hook 'erc-text-matched-hook 'erc-global-notify)
