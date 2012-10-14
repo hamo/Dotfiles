@@ -6,7 +6,7 @@
 (tool-bar-mode 0)
 (show-paren-mode t)
 (scroll-bar-mode 0)
-(setq make-backup-files 0)
+(setq make-backup-files nil)
 
 ;; set default font and size
 (set-face-attribute 'default  0  :family "YaHei Consolas Hybrid"
