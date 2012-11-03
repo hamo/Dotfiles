@@ -5,10 +5,10 @@
 	name = Yang Bai
 	email = hamo.by@gmail.com
 [color] # Ensure we get color
-	diff	 = always
+	diff	 = auto
 	branch	 = auto
 	status	 = auto
-	grep	 = always
+	grep	 = auto
 [sendemail]
         smtpencryption = tls
         smtpserver = smtp.gmail.com
