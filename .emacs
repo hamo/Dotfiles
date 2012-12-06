@@ -20,7 +20,7 @@
 (color-theme-taming-mr-arneson)
 
 ;; ERC
-;;;;erc notify send;;;;
+;;;;erc notify send;;;;;
 (require 'notifications)
 (defun erc-global-notify (match-type nick message)
   "Notify when a message is recieved."
@@ -29,3 +29,9 @@
     :title (car (split-string nick "!"))
     :urgency 'normal))
 (add-hook 'erc-text-matched-hook 'erc-global-notify)
+;;;;;erc kick auto-rejoin;;;;;
+(defun auto-rejoin(buffer)
+  (let ((bn (buffer-name buffer)))
+    (run-at-time "0.1 sec" nil	
+		 (lambda (bn) (set-buffer bn) (erc-join-channel bn)) bn)))
+(add-hook 'erc-kick-hook 'auto-rejoin)
