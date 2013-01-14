@@ -83,3 +83,8 @@ fi
 alias newsmth="luit -encoding gbk ssh hamobai@newsmth.net"
 
 alias u="cd .."
+
+# ibus input method
+export GTK_IM_MODULE=ibus
+export XMODIFIERS=@im=ibus
+export QT_IM_MODULE=ibus
