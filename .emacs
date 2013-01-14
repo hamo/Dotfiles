@@ -19,8 +19,8 @@
 (server-start)
 
 ;; color-theme
-(color-theme-initialize)
-(color-theme-taming-mr-arneson)
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/color-theme-solarized/")
+(load-theme 'solarized-dark t)
 
 ;; ERC
 ;;;;erc notify send;;;;;
