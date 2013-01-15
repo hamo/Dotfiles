@@ -38,3 +38,6 @@
     (run-at-time "0.1 sec" nil	
 		 (lambda (bn) (set-buffer bn) (erc-join-channel bn)) bn)))
 (add-hook 'erc-kick-hook 'auto-rejoin)
+
+;; ibus-el
+(require 'ibus)
