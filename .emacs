@@ -1,5 +1,6 @@
-;;add ~/.emacs.d/lisp/ to load-path
-(add-to-list 'load-path "~/.emacs.d/lisp/")
+;;add ~/.emacs.d/lisp/ and its subdirs to load-path
+(let ((default-directory "~/.emacs.d/lisp/"))
+  (normal-top-level-add-subdirs-to-load-path))
 
 ;;show time
 (display-time)
@@ -40,4 +41,5 @@
 (add-hook 'erc-kick-hook 'auto-rejoin)
 
 ;; ibus-el
+(custom-set-variables '(ibus-python-shell-command-name "python2"))
 (require 'ibus)
