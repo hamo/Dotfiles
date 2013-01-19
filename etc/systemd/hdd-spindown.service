@@ -1,0 +1,8 @@
+[Unit]
+Description=set hard disk APM level and spindown timeout
+
+[Service]
+ExecStart=/sbin/hdparm -B255 -S242 /dev/sda
+
+[Install]
+WantedBy=multi-user.target
