@@ -80,6 +80,6 @@ fi
 # my alias
 
 # type newsmth to access ssh@newsmth.net
-alias newsmth="luit -encoding gbk ssh hamobai@newsmth.net"
+alias newsmth="luit -encoding gbk ssh -1 hamobai@newsmth.net"
 
 alias u="cd .."
