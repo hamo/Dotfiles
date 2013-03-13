@@ -23,6 +23,9 @@
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/color-theme-solarized/")
 (load-theme 'solarized-dark t)
 
+;; go-mode
+(require 'go-mode-load)
+
 ;; ERC
 ;;;;erc notify send;;;;;
 (require 'notifications)
