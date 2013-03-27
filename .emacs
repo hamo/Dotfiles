@@ -1,3 +1,8 @@
+;; Enable ELPA
+(require 'package)
+(add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/"))
+(package-initialize)
+
 ;;add ~/.emacs.d/lisp/ and its subdirs to load-path
 (let ((default-directory "~/.emacs.d/lisp/"))
   (normal-top-level-add-subdirs-to-load-path))
