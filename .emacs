@@ -4,13 +4,29 @@
 
 ;;show time
 (display-time)
+(setq display-time-24hr-format t)
+(setq display-time-day-and-date t)
 ;;show line and column number
 (line-number-mode t)
 (column-number-mode t)
+;;hide toolbar and scroll-bar
 (tool-bar-mode 0)
-(show-paren-mode t)
 (scroll-bar-mode 0)
+(show-paren-mode t)
 (setq make-backup-files nil)
+(display-battery-mode t)
+
+(fset 'yes-or-no-p 'y-or-n-p)
+
+;;; MAXIMUM BUFFER HIGHLIGHTING.
+(defconst font-lock-maximum-decoration t)
+
+; Do without annoying startup msg
+(setq inhibit-startup-message t)
+; Auto decompress compressed files
+(auto-compression-mode 1)
+; replace highlighted text with what I type rather than just inserting at point
+(delete-selection-mode t)
 
 ;; set default font and size
 (set-face-attribute 'default  0  :family "YaHei Consolas Hybrid"
