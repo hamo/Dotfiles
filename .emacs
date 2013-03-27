@@ -26,8 +26,6 @@
 ;;; MAXIMUM BUFFER HIGHLIGHTING.
 (defconst font-lock-maximum-decoration t)
 
-; Do without annoying startup msg
-(setq inhibit-startup-message t)
 ; Auto decompress compressed files
 (auto-compression-mode 1)
 ; replace highlighted text with what I type rather than just inserting at point
@@ -67,3 +65,7 @@
 ;; ibus-el
 (custom-set-variables '(ibus-python-shell-command-name "python2"))
 (require 'ibus)
+
+;; git-el
+(require 'git)
+(require 'git-blame)
