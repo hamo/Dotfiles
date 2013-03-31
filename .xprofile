@@ -1,8 +1,2 @@
-# ibus input method
-export GTK_IM_MODULE=ibus
-export XMODIFIERS=@im=ibus
-export QT_IM_MODULE=ibus
-ibus-daemon -xrd
-
 # disable touchpad when typing
-syndaemon -t -k -i 2 -d &
+syndaemon -k -i 2 -d &
