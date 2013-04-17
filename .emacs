@@ -62,10 +62,6 @@
 		 (lambda (bn) (set-buffer bn) (erc-join-channel bn)) bn)))
 (add-hook 'erc-kick-hook 'auto-rejoin)
 
-;; ibus-el
-(custom-set-variables '(ibus-python-shell-command-name "python2"))
-(require 'ibus)
-
 ;; git-el
 (require 'git)
 (require 'git-blame)
