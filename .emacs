@@ -66,3 +66,7 @@
 ;; git-el
 (require 'git)
 (require 'git-blame)
+
+;; auto-complete
+(require 'auto-complete-config)
+(ac-config-default)
