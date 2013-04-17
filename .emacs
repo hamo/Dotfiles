@@ -39,7 +39,6 @@
 (server-start)
 
 ;; color-theme
-(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/color-theme-solarized/")
 (load-theme 'solarized-dark t)
 
 ;; go-mode
