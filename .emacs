@@ -70,3 +70,5 @@
 ;; auto-complete
 (require 'auto-complete-config)
 (ac-config-default)
+;;;; Golang complete
+(require 'go-autocomplete)
