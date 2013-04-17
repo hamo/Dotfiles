@@ -1,9 +1,4 @@
 *.bak
-.emacs.d/auto-save-list/*
 #*
 .#*
 .vim/.*
-.emacs.d/session*
-.emacs.d/tramp
-.emacs.d/eshell
-.emacs.d/elpa
