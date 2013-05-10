@@ -72,3 +72,5 @@
 (ac-config-default)
 ;;;; Golang complete
 (require 'go-autocomplete)
+;;;; auto-complete-clang-async
+(require 'auto-complete-clang-async)
