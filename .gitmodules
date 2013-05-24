@@ -1,0 +1,3 @@
+[submodule ".emacs.d/lisp/DoubanMusic"]
+	path = .emacs.d/lisp/DoubanMusic
+	url = https://github.com/zhengyuli/DoubanMusic.git
