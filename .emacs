@@ -5,6 +5,18 @@
 (add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/"))
 (package-initialize)
 
+;; auto install packages from ELPA if not installed
+(when (not package-archive-contents)
+  (package-refresh-contents))
+(defvar my-packages
+  '(color-theme-solarized auto-complete go-autocomplete auto-complete-clang-async)
+   "A list of packages to ensure are installed at launch."
+   )
+(dolist (p my-packages)
+  (when (not (package-installed-p p))
+    (package-install p)
+    ))
+
 ;;add ~/.emacs.d/lisp/ and its subdirs to load-path
 (let ((default-directory "~/.emacs.d/lisp/"))
   (normal-top-level-add-subdirs-to-load-path))
