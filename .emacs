@@ -75,10 +75,6 @@
 		 (lambda (bn) (set-buffer bn) (erc-join-channel bn)) bn)))
 (add-hook 'erc-kick-hook 'auto-rejoin)
 
-;; Douban-music-mode
-;; code at .emacs.d/lisp/DoubanMusic as submodule
-(autoload 'douban-music "douban-music-mode" nil t)
-
 ;; git-el
 (require 'git)
 (require 'git-blame)
