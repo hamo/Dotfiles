@@ -9,7 +9,7 @@
 (when (not package-archive-contents)
   (package-refresh-contents))
 (defvar my-packages
-  '(color-theme-solarized auto-complete go-autocomplete auto-complete-clang-async)
+  '(color-theme-solarized auto-complete go-autocomplete auto-complete-clang-async weechat)
    "A list of packages to ensure are installed at launch."
    )
 (dolist (p my-packages)
@@ -86,3 +86,9 @@
 (require 'go-autocomplete)
 ;;;; auto-complete-clang-async
 (require 'auto-complete-clang-async)
+
+;; weechat
+(require 'weechat)
+(require 'weechat-color)
+(require 'weechat-complete)
+(require 'weechat-notifications)
