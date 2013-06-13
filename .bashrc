@@ -78,11 +78,14 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 fi
 
 # my alias
-
 # type newsmth to access ssh@newsmth.net
 alias newsmth="luit -encoding gbk ssh -1 hamobai@newsmth.net"
-
 alias u="cd .."
 
 # my var
 export EDITOR="vim"
+
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/bin" ] ; then
+    PATH="$HOME/bin:$PATH"
+fi
