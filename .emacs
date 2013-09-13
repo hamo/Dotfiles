@@ -86,9 +86,3 @@
 (require 'go-autocomplete)
 ;;;; auto-complete-clang-async
 (require 'auto-complete-clang-async)
-
-;; weechat
-(require 'weechat)
-(require 'weechat-color)
-(require 'weechat-complete)
-(require 'weechat-notifications)
