@@ -77,11 +77,6 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-# ibus support
-export GTK_IM_MODULE=ibus
-export XMODIFIERS=@im=ibus
-export QT_IM_MODULE=ibus
-
 # my alias
 # type newsmth to access ssh@newsmth.net
 alias newsmth="luit -encoding gbk ssh -1 hamobai@newsmth.net"
