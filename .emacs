@@ -19,7 +19,10 @@
     go-mode
     go-autocomplete
     auto-complete-clang-async
-    markdown-mode)
+    markdown-mode
+    clojure-mode
+    clojure-test-mode
+    cider)
    "A list of packages to ensure are installed at launch."
    )
 (dolist (p my-packages)
