@@ -9,7 +9,12 @@
 (when (not package-archive-contents)
   (package-refresh-contents))
 (defvar my-packages
-  '(color-theme-solarized
+  '(starter-kit
+    starter-kit-bindings
+    starter-kit-eshell
+    starter-kit-js
+    starter-kit-lisp
+    color-theme-solarized
     auto-complete
     go-mode
     go-autocomplete

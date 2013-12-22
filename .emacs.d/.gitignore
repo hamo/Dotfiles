@@ -6,3 +6,6 @@ elpa
 ac-comphist.dat
 semanticdb
 url
+.smex-items
+backups
+places
