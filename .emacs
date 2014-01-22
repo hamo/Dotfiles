@@ -93,3 +93,6 @@
 (require 'go-autocomplete)
 ;;;; auto-complete-clang-async
 (require 'auto-complete-clang-async)
+
+;; org-mode
+(setq org-startup-indented t)
