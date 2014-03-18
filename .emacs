@@ -24,7 +24,11 @@
     markdown-mode
     clojure-mode
     clojure-test-mode
-    cider)
+    cider
+    scala-mode2
+    sbt-mode
+    ensime
+    )
   "A list of packages to ensure are installed at launch."
   )
 (dolist (p my-packages)
