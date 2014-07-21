@@ -23,7 +23,6 @@
     auto-complete-clang-async
     markdown-mode
     clojure-mode
-    clojure-test-mode
     cider
     scala-mode2
     sbt-mode
