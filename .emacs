@@ -27,6 +27,7 @@
     scala-mode2
     sbt-mode
     ensime
+    dockerfile-mode
     )
   "A list of packages to ensure are installed at launch."
   )
