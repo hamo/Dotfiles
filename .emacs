@@ -28,6 +28,7 @@
     sbt-mode
     ensime
     dockerfile-mode
+    flycheck
     )
   "A list of packages to ensure are installed at launch."
   )
@@ -82,7 +83,7 @@
 ;;;; erc kick auto-rejoin
 (defun auto-rejoin(buffer)
   (let ((bn (buffer-name buffer)))
-    (run-at-time "0.1 sec" nil	
+    (run-at-time "0.1 sec" nil
 		 (lambda (bn) (set-buffer bn) (erc-join-channel bn)) bn)))
 (add-hook 'erc-kick-hook 'auto-rejoin)
 
@@ -100,3 +101,10 @@
 
 ;; org-mode
 (setq org-startup-indented t)
+
+;; flycheck
+(add-hook 'after-init-hook #'global-flycheck-mode)
+
+(provide '.emacs)
+
+;;; .emacs ends here
