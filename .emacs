@@ -42,9 +42,9 @@
   (normal-top-level-add-subdirs-to-load-path))
 
 ;; show time
-(display-time)
-(setq display-time-24hr-format t)
 (setq display-time-day-and-date t)
+(setq display-time-24hr-format t)
+(display-time)
 
 (show-paren-mode t)
 (setq make-backup-files nil)
