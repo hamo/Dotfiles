@@ -27,6 +27,7 @@
     ensime
     dockerfile-mode
     flycheck
+    magit
     )
   "A list of packages to ensure are installed at launch."
   )
@@ -84,10 +85,6 @@
     (run-at-time "0.1 sec" nil
 		 (lambda (bn) (set-buffer bn) (erc-join-channel bn)) bn)))
 (add-hook 'erc-kick-hook 'auto-rejoin)
-
-;; git-el
-(require 'git)
-(require 'git-blame)
 
 ;; auto-complete
 (require 'auto-complete-config)
