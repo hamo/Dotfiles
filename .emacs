@@ -15,8 +15,6 @@
     starter-kit-js
     starter-kit-lisp
     color-theme-solarized
-    org
-    org-plus-contrib
     auto-complete
     go-mode
     go-autocomplete
