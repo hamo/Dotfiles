@@ -27,6 +27,8 @@
     dockerfile-mode
     flycheck
     magit
+    undo-tree
+    ace-jump-mode
     )
   "A list of packages to ensure are installed at launch."
   )
@@ -98,6 +100,15 @@
 
 ;; flycheck
 (add-hook 'after-init-hook #'global-flycheck-mode)
+
+;; undo-tree
+(require 'undo-tree)
+(global-undo-tree-mode)
+(setq undo-tree-auto-save-history t)
+(setq undo-tree-history-directory-alist `(("." . ,(concat user-emacs-directory "undo"))))
+(defadvice undo-tree-make-history-save-file-name
+  (after undo-tree activate)
+  (setq ad-return-value (concat ad-return-value ".gz")))
 
 (provide '.emacs)
 
