@@ -1,0 +1,56 @@
+(in-package :stumpwm)
+(setf *default-package* :stumpwm)
+(set-contrib-dir "/usr/share/stumpwm")
+
+(defparameter terminal "urxvt")
+(set-prefix-key       (kbd "C-j"))
+(set-focus-color      "darkRed")
+(set-unfocus-color    "black")
+(set-win-bg-color     "black")
+(set-fg-color         "lightgray")
+(set-bg-color         "black")
+(set-normal-gravity   :center)
+(setq *shell-program* (stumpwm::getenv "SHELL"))
+
+(defcommand urxvt () ()
+  (run-or-raise "urxvt" '(:class "URxvt")))
+(define-key *root-map* (kbd "C-c") "urxvt")
+
+;; emacs
+(defcommand emacs () ()  ; redefining emacs command
+  "Start Emacs or switch to it, if it is already running."
+  (run-or-raise "emacs" '(:class "Emacs")))
+(define-key *top-map* (kbd "XF86Launch1") "emacs")
+
+;; launch Web browser
+;;; firefox
+(defcommand firefox () ()
+  "Start Firefox or switch to it, if it is already running."
+  (run-or-raise "firefox" '(:class "Firefox")))
+(define-key *root-map* (kbd "f") "firefox")
+;;; chrome
+(defcommand chrome () ()
+  "Start Chrome or switch to it, if it is already running."
+  (run-or-raise "/opt/google/chrome/google-chrome" '(:class "google-chrome")))
+(define-key *root-map* (kbd "c") "chrome")
+
+;; key binding
+(define-key *top-map* (kbd "XF86AudioRaiseVolume") "exec amixer -c 0 set Master 3dB+")
+(define-key *top-map* (kbd "XF86AudioLowerVolume") "exec amixer -c 0 set Master 3dB-")
+(define-key *top-map* (kbd "XF86AudioMute") "exec amixer -q sset Master toggle")
+
+;; (define-key *top-map* (kbd "XF86MonBrightnessUp") "exec xbacklight + 5")
+;; (define-key *top-map* (kbd "XF86MonBrightnessDown") "exec xbacklight - 5")
+
+(define-key *root-map* (kbd "m") "exec xterm -rv -e alsamixer")
+
+(define-key *root-map* (kbd "C-l") "exec xlock")
+
+(clear-window-placement-rules)
+
+(setf *message-window-gravity* :center)
+(setf *input-window-gravity* :center)
+
+(provide '.stumpwmrc)
+
+;;; .stumpwmrc ends here
