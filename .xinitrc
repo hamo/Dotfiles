@@ -3,7 +3,6 @@
 
 [ -f ~/.xmodmaprc ] && xmodmap ~/.xmodmaprc
 
-fcitx &
-sogou-qimpanel &
+fcitx-autostart &
 
 exec stumpwm
