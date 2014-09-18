@@ -1,6 +1,5 @@
 (in-package :stumpwm)
 (setf *default-package* :stumpwm)
-(set-contrib-dir "/usr/share/stumpwm")
 
 ;; Define wallpapers dir
 (defvar *background-image-path* "~/wallpapers/")
