@@ -49,12 +49,7 @@
 (define-key *root-map* (kbd "C-l") "exec xlock")
 
 ;; Select a random background image from a given folder
-(defun select-random-background-image ()
-  "Select a random image"
-  (let ((file-list (directory (concatenate 'string *background-image-path* "*.jpg")))
-        (*random-state* (make-random-state t)))
-    (namestring (nth (random (length file-list)) file-list))))
-(run-shell-command (concatenate 'string "display -window root " (select-random-background-image)))
+(run-shell-command (concatenate 'string "feh --bg-max --randomize " *background-image-path*))
 
 ;; Set the mouse policy to focus follows mouse;
 (setf *mouse-focus-policy* :click) ;; :click, :ignore, :sloppy
