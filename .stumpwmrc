@@ -53,6 +53,10 @@
 ;; Set the mouse policy to focus follows mouse;
 (setf *mouse-focus-policy* :click) ;; :click, :ignore, :sloppy
 
+;; frame/window number start with 1
+(setf *frame-number-map* "1234567890")
+(setf *window-number-map* "1234567890")
+
 (clear-window-placement-rules)
 
 (setf *message-window-gravity* :center)
