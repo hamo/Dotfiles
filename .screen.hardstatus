@@ -1,4 +1,5 @@
 #!/bin/sh
 
 battery=`acpi | awk -F ', ' '{print $2}'`
-echo $battery
+adapter=`acpi -a | awk -F ': ' '{print $2}'`
+echo "$battery($adapter)"
