@@ -1,6 +1,9 @@
+;;; .emacs -- init
+;;; Commentary:
+;;; Code:
+
 ;; Enable ELPA
 (require 'package)
-;; (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
 (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
 (package-initialize)
 
@@ -8,11 +11,7 @@
 (when (not package-archive-contents)
   (package-refresh-contents))
 (defvar my-packages
-  '(starter-kit
-    starter-kit-bindings
-    starter-kit-eshell
-    starter-kit-js
-    starter-kit-lisp
+  '(helm
     color-theme-solarized
     auto-complete
     go-mode
@@ -28,7 +27,6 @@
     flycheck
     magit
     undo-tree
-    ace-jump-mode
     )
   "A list of packages to ensure are installed at launch."
   )
@@ -45,6 +43,13 @@
 (setq display-time-day-and-date t)
 (setq display-time-24hr-format t)
 (display-time)
+
+;; UI
+(tool-bar-mode -1)
+(scroll-bar-mode -1)
+(menu-bar-mode -1)
+(setq inhibit-splash-screen t)
+(setq inhibit-startup-message t)
 
 (show-paren-mode t)
 (setq make-backup-files nil)
@@ -104,9 +109,6 @@
   (global-auto-complete-mode t))
 (my-ac-config)
 
-;; org-mode
-(setq org-startup-indented t)
-
 ;; flycheck
 (add-hook 'after-init-hook #'global-flycheck-mode)
 
@@ -119,6 +121,11 @@
   (after undo-tree activate)
   (setq ad-return-value (concat ad-return-value ".gz")))
 
-(provide '.emacs)
+(helm-mode 1)
 
+(custom-set-variables
+  '(helm-completing-read-handlers-alist (quote ((find-file . ido) (find-file-read-only . ido) (find-alternate-file . ido))))
+)
+
+(provide '.emacs)
 ;;; .emacs ends here
