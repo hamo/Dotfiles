@@ -122,6 +122,7 @@
   (setq ad-return-value (concat ad-return-value ".gz")))
 
 (helm-mode 1)
+(setq ido-enable-flex-matching t)
 
 (custom-set-variables
   '(helm-completing-read-handlers-alist (quote ((find-file . ido) (find-file-read-only . ido) (find-alternate-file . ido))))
