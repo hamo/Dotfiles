@@ -12,6 +12,7 @@
   (package-refresh-contents))
 (defvar my-packages
   '(helm
+    idle-highlight-mode
     color-theme-solarized
     auto-complete
     go-mode
@@ -111,6 +112,8 @@
 
 ;; flycheck
 (add-hook 'after-init-hook #'global-flycheck-mode)
+
+(add-hook 'prog-mode-hook 'idle-highlight-mode)
 
 ;; undo-tree
 (require 'undo-tree)
