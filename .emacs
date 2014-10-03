@@ -1,4 +1,4 @@
-;;; .emacs -- init
+;;; .emacs --- init
 ;;; Commentary:
 ;;; Code:
 
@@ -6,76 +6,38 @@
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
 (package-initialize)
+(setq package-enable-at-startup nil)
 
-;; auto install packages from ELPA if not installed
-(when (not package-archive-contents)
-  (package-refresh-contents))
-(defvar my-packages
-  '(helm
-    idle-highlight-mode
-    color-theme-solarized
-    auto-complete
-    go-mode
-    go-autocomplete
-    auto-complete-clang-async
-    markdown-mode
-    clojure-mode
-    cider
-    scala-mode2
-    sbt-mode
-    ensime
-    dockerfile-mode
-    flycheck
-    magit
-    undo-tree
-    )
-  "A list of packages to ensure are installed at launch."
-  )
-(dolist (p my-packages)
-  (when (not (package-installed-p p))
-    (package-install p)
-    ))
+(setq user-full-name "Yang Bai"
+      user-mail-address "hamo.by@gmail.com")
 
-;; add ~/.emacs.d/lisp/ and its subdirs to load-path
-(let ((default-directory "~/.emacs.d/lisp/"))
-  (normal-top-level-add-subdirs-to-load-path))
+(defun local/package-install (package &optional repository)
+  "Install PACKAGE if it has not yet been installed.
+If REPOSITORY is specified, use that."
+  (when (not package-archive-contents)
+    (package-refresh-contents))
+  (unless (package-installed-p package)
+    (let ((package-archives (if repository
+                                (list (assoc repository package-archives))
+                              package-archives)))
+      (package-install package))))
 
-;; show time
-(setq display-time-day-and-date t)
-(setq display-time-24hr-format t)
-(display-time)
+(local/package-install 'use-package)
+(require 'use-package)
 
-;; UI
-(tool-bar-mode -1)
-(scroll-bar-mode -1)
-(menu-bar-mode -1)
-(setq inhibit-splash-screen t)
-(setq inhibit-startup-message t)
+(load "~/.emacs.d/init.d/basic.el")
+(load "~/.emacs.d/init.d/ui.el")
+(load "~/.emacs.d/init.d/completion.el")
+(load "~/.emacs.d/init.d/modes.el")
+(load "~/.emacs.d/init.d/misc.el")
 
-(show-paren-mode t)
-(setq make-backup-files nil)
-(display-battery-mode t)
+(load "~/.emacs.d/init.d/programming/general.el")
+(load "~/.emacs.d/init.d/programming/go.el")
+(load "~/.emacs.d/init.d/programming/clojure.el")
+(load "~/.emacs.d/init.d/programming/scala.el")
+(load "~/.emacs.d/init.d/programming/misc.el")
 
-(fset 'yes-or-no-p 'y-or-n-p)
-
-;; MAXIMUM BUFFER HIGHLIGHTING.
-(defconst font-lock-maximum-decoration t)
-
-;; Auto decompress compressed files
-(auto-compression-mode 1)
-;; replace highlighted text with what I type rather than just inserting at point
-(delete-selection-mode t)
-
-;; set default font and size
-(set-face-attribute 'default  0  :family "YaHei Consolas Hybrid"
-                    :height 120)
-
-;; start emacs as a server
-(server-start)
-
-;; color-theme
-(load-theme 'solarized-dark t)
-
+;;; FIXME: move it to module or remove it
 ;; ERC
 ;;;; erc notify send
 (require 'notifications)
@@ -92,44 +54,6 @@
     (run-at-time "0.1 sec" nil
 		 (lambda (bn) (set-buffer bn) (erc-join-channel bn)) bn)))
 (add-hook 'erc-kick-hook 'auto-rejoin)
-
-;; auto-complete
-(require 'auto-complete-config)
-(ac-config-default)
-;;;; Golang complete
-(require 'go-autocomplete)
-;;;; auto-complete-clang-async
-(require 'auto-complete-clang-async)
-(defun ac-cc-mode-setup ()
-  (setq ac-sources (append '(ac-source-clang-async) ac-sources))
-  (ac-clang-launch-completion-process)
-)
-(defun my-ac-config ()
-  (add-hook 'c-mode-common-hook 'ac-cc-mode-setup)
-  (add-hook 'auto-complete-mode-hook 'ac-common-setup)
-  (global-auto-complete-mode t))
-(my-ac-config)
-
-;; flycheck
-(add-hook 'after-init-hook #'global-flycheck-mode)
-
-(add-hook 'prog-mode-hook 'idle-highlight-mode)
-
-;; undo-tree
-(require 'undo-tree)
-(global-undo-tree-mode)
-(setq undo-tree-auto-save-history t)
-(setq undo-tree-history-directory-alist `(("." . ,(concat user-emacs-directory "undo"))))
-(defadvice undo-tree-make-history-save-file-name
-  (after undo-tree activate)
-  (setq ad-return-value (concat ad-return-value ".gz")))
-
-(helm-mode 1)
-(setq ido-enable-flex-matching t)
-
-(custom-set-variables
-  '(helm-completing-read-handlers-alist (quote ((find-file . ido) (find-file-read-only . ido) (find-alternate-file . ido))))
-)
 
 (provide '.emacs)
 ;;; .emacs ends here
