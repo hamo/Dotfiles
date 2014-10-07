@@ -9,3 +9,10 @@
   :init
   (progn
     (add-hook 'after-init-hook #'global-flycheck-mode)))
+
+(defun highlight-font-lock-comment-annotations ()
+  "Highlight a bunch of well known comment annotations."
+  (font-lock-add-keywords
+   nil '(("\\<\\(\\(FIX\\(ME\\)?\\|TODO\\|OPTIMIZE\\|HACK\\|REFACTOR\\):\\)"
+          1 font-lock-warning-face t))))
+(add-hook 'prog-mode-hook 'highlight-font-lock-comment-annotations)
