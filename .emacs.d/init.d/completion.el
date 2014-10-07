@@ -16,7 +16,9 @@
   (progn
     (add-to-list 'helm-completing-read-handlers-alist '(find-file . ido))
     (add-to-list 'helm-completing-read-handlers-alist '(find-file-read-only . ido))
-    (add-to-list 'helm-completing-read-handlers-alist '(find-alternate-file . ido))))
+    (add-to-list 'helm-completing-read-handlers-alist '(find-alternate-file . ido)))
+  :bind
+  (("M-x" . helm-M-x)))
 (ido-mode -1) ;; Turn off ido mode in case I enabled it accidentally
 (setq ido-enable-flex-matching t)
 
