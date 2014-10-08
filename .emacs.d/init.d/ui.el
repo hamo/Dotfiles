@@ -19,6 +19,7 @@
 (require 'diminish)
 (eval-after-load "undo-tree" '(diminish 'undo-tree-mode))
 (eval-after-load "eldoc" '(diminish 'eldoc-mode))
+(eval-after-load "company" '(diminish 'company-mode))
 (diminish 'visual-line-mode)
 
 (show-paren-mode t)
