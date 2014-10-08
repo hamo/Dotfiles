@@ -32,6 +32,17 @@
 (local/package-install 'color-theme-solarized)
 (load-theme 'solarized-dark t)
 
+;;; http://nyan-mode.buildsomethingamazing.com/
+(local/package-install 'nyan-mode)
+(when window-system
+  (use-package nyan-mode
+    :init
+    (progn
+      (nyan-mode 1))
+    :config
+    (progn
+      (nyan-start-animation))))
+
 ;;; undo-tree
 (local/package-install 'undo-tree)
 (use-package undo-tree
