@@ -32,6 +32,7 @@ If REPOSITORY is specified, use that."
 (load "~/.emacs.d/init.d/misc.el")
 
 (load "~/.emacs.d/init.d/programming/general.el")
+(load "~/.emacs.d/init.d/programming/c-family.el")
 (load "~/.emacs.d/init.d/programming/go.el")
 (load "~/.emacs.d/init.d/programming/clojure.el")
 (load "~/.emacs.d/init.d/programming/scala.el")
