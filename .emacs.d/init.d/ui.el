@@ -19,7 +19,9 @@
 (require 'diminish)
 (eval-after-load "undo-tree" '(diminish 'undo-tree-mode))
 (eval-after-load "eldoc" '(diminish 'eldoc-mode))
-(eval-after-load "company" '(diminish 'company-mode))
+(eval-after-load "auto-complete" '(diminish 'auto-complete-mode))
+(eval-after-load "magit" '(diminish 'magit-auto-revert-mode))
+(eval-after-load "yasnippet" '(diminish 'yas-minor-mode))
 (diminish 'visual-line-mode)
 
 (show-paren-mode t)

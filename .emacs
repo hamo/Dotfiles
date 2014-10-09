@@ -38,23 +38,5 @@ If REPOSITORY is specified, use that."
 (load "~/.emacs.d/init.d/programming/scala.el")
 (load "~/.emacs.d/init.d/programming/misc.el")
 
-;;; FIXME: move it to module or remove it
-;; ERC
-;;;; erc notify send
-(require 'notifications)
-(defun erc-global-notify (match-type nick message)
-  "Notify when a message is recieved."
-  (notifications-notify
-   :body message
-   :title (car (split-string nick "!"))
-   :urgency 'normal))
-(add-hook 'erc-text-matched-hook 'erc-global-notify)
-;;;; erc kick auto-rejoin
-(defun auto-rejoin(buffer)
-  (let ((bn (buffer-name buffer)))
-    (run-at-time "0.1 sec" nil
-		 (lambda (bn) (set-buffer bn) (erc-join-channel bn)) bn)))
-(add-hook 'erc-kick-hook 'auto-rejoin)
-
 (provide '.emacs)
 ;;; .emacs ends here
