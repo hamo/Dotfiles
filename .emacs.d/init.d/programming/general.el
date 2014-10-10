@@ -17,6 +17,10 @@
           1 font-lock-warning-face t))))
 (add-hook 'prog-mode-hook 'highlight-font-lock-comment-annotations)
 
+(local/package-install 'rainbow-delimiters)
+(require 'rainbow-delimiters)
+(add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
+
 ;;; Semantic
 (require 'semantic)
 (add-to-list 'semantic-default-submodes 'global-semantic-idle-scheduler-mode)
