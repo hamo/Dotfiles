@@ -3,6 +3,8 @@
 (add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
 
 (require 'cc-mode)
+(add-hook 'c-mode-common-hook (lambda ()
+				(setq-default indent-tabs-mode nil)))
 
 (require 'auto-complete-clang-async)
 (defun ac-cc-mode-setup ()
