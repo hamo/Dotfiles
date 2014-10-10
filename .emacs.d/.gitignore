@@ -1,4 +1,4 @@
-auto-save-list/*
+auto-save-list
 session*
 tramp
 eshell
@@ -10,3 +10,5 @@ url
 backups
 places
 undo
+projectile-bookmarks.eld
+projectile.cache

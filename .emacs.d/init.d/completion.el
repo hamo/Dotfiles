@@ -1,5 +1,6 @@
 ;;; helm
 (local/package-install 'helm)
+(local/package-install 'helm-projectile)
 (use-package helm
   :init
   (progn
