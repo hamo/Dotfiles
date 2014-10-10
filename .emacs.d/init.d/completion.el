@@ -2,6 +2,7 @@
 (local/package-install 'helm)
 (local/package-install 'helm-projectile)
 (use-package helm
+  :diminish helm-mode
   :init
   (progn
     (require 'helm-config)
@@ -25,6 +26,7 @@
 ;;; should be loaded before auto complete so that they can work together
 (local/package-install 'yasnippet)
 (use-package yasnippet
+  :diminish yas-minor-mode
   :init
   (progn
     (yas-global-mode 1)))
@@ -33,6 +35,7 @@
 ;;; should be loaded after yasnippet so that they can work together
 (local/package-install 'auto-complete)
 (use-package auto-complete
+  :diminish auto-complete-mode
   :init
   (progn
     (require 'auto-complete-config))
