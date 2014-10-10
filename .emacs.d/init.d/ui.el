@@ -24,7 +24,8 @@
 (eval-after-load "yasnippet" '(diminish 'yas-minor-mode))
 (diminish 'visual-line-mode)
 
-(show-paren-mode t)
+; use the similiar functionality provided by smartparens
+;(show-paren-mode t)
 (fset 'yes-or-no-p 'y-or-n-p)
 
 ;;; set default font and size
