@@ -32,7 +32,8 @@
                     :height 120)
 
 ;;; theme
-(local/package-install 'color-theme-solarized)
+;;; https://github.com/bbatsov/solarized-emacs
+(local/package-install 'solarized-theme)
 (load-theme 'solarized-dark t)
 
 ;;; http://nyan-mode.buildsomethingamazing.com/
