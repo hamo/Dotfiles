@@ -34,6 +34,7 @@
 ;;; theme
 ;;; https://github.com/bbatsov/solarized-emacs
 (local/package-install 'solarized-theme)
+(setq x-underline-at-descent-line t)
 (load-theme 'solarized-dark t)
 
 ;;; http://nyan-mode.buildsomethingamazing.com/
