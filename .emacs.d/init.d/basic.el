@@ -2,6 +2,8 @@
 (setq require-final-newline t)
 (global-auto-revert-mode t)
 
+(setq x-select-enable-clipboard t)
+
 ;;; MAXIMUM BUFFER HIGHLIGHTING.
 (defconst font-lock-maximum-decoration t)
 
