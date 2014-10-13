@@ -1,10 +1,11 @@
 (local/package-install 'go-mode)
-(local/package-install 'go-autocomplete)
 (local/package-install 'go-eldoc)
+(local/package-install 'company-go)
 
 (use-package go-mode
   :init
   (progn
-    (require 'go-autocomplete)
-    (add-hook 'before-save-hook 'gofmt-before-save)
-    (add-hook 'go-mode-hook 'go-eldoc-setup)))
+    (add-hook 'go-mode-hook (lambda ()
+			      (go-eldoc-setup)
+			      (set (make-local-variable 'company-backends) '(company-go company-yasnippet))))
+    (add-hook 'before-save-hook 'gofmt-before-save)))

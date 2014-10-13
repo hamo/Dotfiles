@@ -9,7 +9,7 @@
     ;; From https://gist.github.com/antifuchs/9238468
     (setq helm-idle-delay 0.0 ; update fast sources immediately (doesn't).
           helm-input-idle-delay 0.01  ; this actually updates things
-					; reeeelatively quickly.
+                                      ; reeeelatively quickly.
           helm-quick-update t
           helm-M-x-requires-pattern nil
           helm-ff-skip-boring-files t)
@@ -31,21 +31,27 @@
   (progn
     (yas-global-mode 1)))
 
-;;; auto complete
+;;; company
 ;;; should be loaded after yasnippet so that they can work together
-(local/package-install 'auto-complete)
-(use-package auto-complete
-  :diminish auto-complete-mode
+(local/package-install 'company)
+(use-package company
+  :diminish company-mode
   :init
   (progn
-    (require 'auto-complete-config))
+    (global-company-mode t))
   :config
   (progn
-    (ac-config-default)
-    (global-auto-complete-mode t)
-    (setq ac-auto-start t)
-    ;;; set the trigger key so that it can work together with yasnippet on tab key,
-    ;;; if the word exists in yasnippet, pressing tab will cause yasnippet to
-    ;;; activate, otherwise, auto-complete will
-    (ac-set-trigger-key "TAB")
-    (ac-set-trigger-key "<tab>")))
+    (setq company-tooltip-limit 20) ; bigger popup window
+    (setq company-idle-delay .3)    ; decrease delay before autocompletion popup shows
+    (setq company-echo-delay 0)     ; remove annoying blinking
+
+    (require 'color)
+    (let ((bg (if window-system
+		  (face-attribute 'default :background)
+		  "black")))
+      (custom-set-faces
+       `(company-tooltip ((t (:inherit default :background ,(color-lighten-name bg 2)))))
+       `(company-scrollbar-bg ((t (:background ,(color-lighten-name bg 10)))))
+       `(company-scrollbar-fg ((t (:background ,(color-lighten-name bg 5)))))
+       `(company-tooltip-selection ((t (:inherit font-lock-function-name-face))))
+       `(company-tooltip-common ((t (:inherit font-lock-constant-face))))))))
