@@ -39,10 +39,6 @@
 		 (erc-services-mode 1)))))
 
 (local/package-install 'weechat)
-(use-package weechat
-  :config
-  (progn
-    ;; https://github.com/the-kenny/weechat.el
-    (setq weechat-modules '(weechat-complete weechat-notifications weechat-tracking weechat-smiley))
-    (add-hook 'weechat-mode-hook (lambda ()
-				   (require 'notifications)))))
+;; https://github.com/the-kenny/weechat.el
+(setq weechat-modules '(weechat-complete weechat-notifications weechat-tracking weechat-smiley))
+(use-package weechat)
