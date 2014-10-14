@@ -29,6 +29,7 @@ If REPOSITORY is specified, use that."
 (load "~/.emacs.d/init.d/ui.el")
 (load "~/.emacs.d/init.d/project-management.el")
 (load "~/.emacs.d/init.d/completion.el")
+(load "~/.emacs.d/init.d/chat.el")
 (load "~/.emacs.d/init.d/modes.el")
 (load "~/.emacs.d/init.d/misc.el")
 
