@@ -1,6 +1,7 @@
 (setq make-backup-files nil)
 (setq require-final-newline t)
 (global-auto-revert-mode t)
+(setq visible-bell t)
 
 (setq x-select-enable-clipboard t)
 
