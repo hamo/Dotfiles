@@ -10,6 +10,9 @@ fi
 
 setxkbmap -option ctrl:nocaps
 
+# Notify
+dunst &
+
 fcitx-autostart &
 
 exec stumpwm
