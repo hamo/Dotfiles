@@ -6,6 +6,7 @@
 				 netsplit noncommands notify notifications
 				 readonly ring services smiley spelling
 				 stamp track)
+	  erc-track-enable-keybindings nil
 	  erc-nick-uniquifier "_"
 	  erc-whowas-on-nosuchnick t ;;if nick is unknown, use whowas instead of whois
 	  erc-keywords nil
