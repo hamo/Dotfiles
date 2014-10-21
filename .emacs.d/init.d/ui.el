@@ -20,7 +20,6 @@
   :init
   (progn
     (diminish 'visual-line-mode)
-    (diminish 'global-visual-line-mode)
     (eval-after-load "abbrev" '(diminish 'abbrev-mode))))
 
 ; use the similiar functionality provided by smartparens
