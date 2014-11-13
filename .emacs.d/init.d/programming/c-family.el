@@ -10,3 +10,6 @@
 (add-hook 'c++-mode-hook (lambda ()
 			   (setq-default indent-tabs-mode nil)
 			   (set (make-local-variable 'company-backends) '(company-c-headers company-clang company-yasnippet))))
+
+(add-hook 'java-mode-hook (lambda ()
+			   (setq-default indent-tabs-mode nil)))
