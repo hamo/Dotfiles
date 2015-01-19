@@ -24,3 +24,11 @@
 (add-hook 'prog-mode-hook (lambda ()
 			    (setq show-trailing-whitespace t)
 			    (electric-indent-mode 1)))
+
+(load "~/.emacs.d/init.d/programming/lisp.el")
+(load "~/.emacs.d/init.d/programming/c-family.el")
+(load "~/.emacs.d/init.d/programming/go.el")
+(load "~/.emacs.d/init.d/programming/clojure.el")
+(load "~/.emacs.d/init.d/programming/scala.el")
+(load "~/.emacs.d/init.d/programming/rust.el")
+(load "~/.emacs.d/init.d/programming/misc.el")
