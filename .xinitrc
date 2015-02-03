@@ -13,6 +13,9 @@ setxkbmap -option ctrl:nocaps
 # Notify
 dunst &
 
-fcitx-autostart &
+# sogoupinyin
+xcompmgr &
+fcitx-autostart
+sogou-qimpanel &
 
 exec stumpwm
