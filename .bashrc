@@ -82,10 +82,11 @@ fi
 alias newsmth="luit -encoding gbk ssh -1 hamobai@newsmth.net"
 alias u="cd .."
 
-# my var
-export EDITOR="vim"
-
 # set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
+fi
+
+if [ -d "$HOME/workspace/gopath" ]; then
+    GOPATH="$HOME/workspace/gopath"
 fi
