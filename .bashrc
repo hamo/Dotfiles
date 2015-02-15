@@ -84,9 +84,9 @@ alias u="cd .."
 
 # set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/bin" ] ; then
-    PATH="$HOME/bin:$PATH"
+    export PATH="$HOME/bin:$PATH"
 fi
 
 if [ -d "$HOME/workspace/gopath" ]; then
-    GOPATH="$HOME/workspace/gopath"
+    export GOPATH="$HOME/workspace/gopath"
 fi
