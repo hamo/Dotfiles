@@ -25,6 +25,18 @@
 			    (setq show-trailing-whitespace t)
 			    (electric-indent-mode 1)))
 
+(local/package-install 'helm-gtags)
+(use-package helm-gtags
+  :init
+  (setq
+   helm-gtags-ignore-case t
+   helm-gtags-auto-update t
+   helm-gtags-use-input-at-cursor t
+   helm-gtags-pulse-at-cursor t
+   helm-gtags-path-style 'root
+   )
+)
+
 (load "~/.emacs.d/init.d/programming/lisp.el")
 (load "~/.emacs.d/init.d/programming/c-family.el")
 (load "~/.emacs.d/init.d/programming/go.el")
