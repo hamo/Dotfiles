@@ -41,7 +41,6 @@
 (load "~/.emacs.d/init.d/programming/c-family.el")
 (load "~/.emacs.d/init.d/programming/go.el")
 (load "~/.emacs.d/init.d/programming/clojure.el")
-(load "~/.emacs.d/init.d/programming/scala.el")
 (load "~/.emacs.d/init.d/programming/rust.el")
 (load "~/.emacs.d/init.d/programming/web.el")
 (load "~/.emacs.d/init.d/programming/javascript.el")
