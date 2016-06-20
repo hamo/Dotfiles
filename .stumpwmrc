@@ -33,7 +33,7 @@
 ;;; chromium
 (defcommand chromium () ()
   "Start Chromium or switch to it, if it is already running."
-  (run-or-raise "chromium" '(:class "Chromium")))
+  (run-or-raise "chromium" '(:instance "chromium")))
 (define-key *root-map* (kbd "c") "chromium")
 
 ;; key binding
