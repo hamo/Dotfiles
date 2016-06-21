@@ -16,7 +16,9 @@
     (helm-mode))
   :config
   (progn
-    (define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action))
+    (define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action)
+    ;; re-enable C-x C-f to use helm
+    (add-to-list 'helm-completing-read-handlers-alist '(find-file . helm-completing-read-symbols)))
   :bind
   (("M-x" . helm-M-x)))
 (ido-mode -1) ;; Turn off ido mode in case I enabled it accidentally
