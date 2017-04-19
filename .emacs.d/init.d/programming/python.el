@@ -16,6 +16,5 @@
     (elpy-enable))
   :config
   (progn
-    (elpy-use-ipython)
-    (setq python-shell-interpreter "ipython3" python-shell-interpreter-args "--simple-prompt --pprint")
+    (defalias 'workon 'pyvenv-workon)
     (add-hook 'elpy-mode-hook 'py-autopep8-enable-on-save)))
