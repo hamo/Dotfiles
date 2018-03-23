@@ -86,3 +86,7 @@ fi
 if [ -d "$HOME/workspace/gopath" ]; then
     export GOPATH="$HOME/workspace/gopath"
 fi
+
+if type thefuck >/dev/null 2>&1; then
+	eval $(thefuck --alias)
+fi
