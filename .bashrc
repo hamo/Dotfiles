@@ -73,11 +73,6 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-# my alias
-# type newsmth to access ssh@newsmth.net
-alias newsmth="luit -encoding gbk ssh -1 hamobai@newsmth.net"
-alias u="cd .."
-
 # set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/bin" ] ; then
     export PATH="$HOME/bin:$PATH"
@@ -90,3 +85,6 @@ fi
 if type thefuck >/dev/null 2>&1; then
 	eval $(thefuck --alias)
 fi
+
+# my alias
+alias u="cd .."
