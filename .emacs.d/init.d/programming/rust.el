@@ -1,7 +1,4 @@
-(local/package-install 'rust-mode)
 (local/package-install 'cargo)
-(local/package-install 'racer)
-(local/package-install 'flycheck-rust)
 
 (use-package rust-mode
   :init
@@ -17,3 +14,7 @@
   (progn
     (add-hook 'rust-mode-hook 'racer-mode)
     (add-hook 'racer-mode-hook 'eldoc-mode)))
+
+(use-package flycheck-rust
+  :config
+  (add-hook 'flycheck-mode-hook #'flycheck-rust-setup))
