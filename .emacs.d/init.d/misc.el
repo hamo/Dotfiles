@@ -1,6 +1,6 @@
 (local/package-install 'smartparens)
 (use-package smartparens
-  :diminish smartparens-mode
+  :delight smartparens-mode
   :config
   (progn
     (require 'smartparens-config)

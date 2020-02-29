@@ -1,6 +1,6 @@
 (local/package-install 'projectile)
 (use-package projectile
-  :diminish "Prjl"
+  :delight "Prjl"
   :init
   (progn
     (projectile-global-mode))

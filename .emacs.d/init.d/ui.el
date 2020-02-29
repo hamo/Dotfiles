@@ -15,12 +15,18 @@
 (display-battery-mode t)
 (column-number-mode 1)
 
-;;; Hide minor modes I care less about
-(use-package diminish
+;;; Hide modes I care less about
+(local/package-install 'delight)
+(use-package delight
   :init
   (progn
-    (diminish 'visual-line-mode)
-    (eval-after-load "abbrev" '(diminish 'abbrev-mode))))
+    (delight '((abbrev-mode " Abv" abbrev)
+            (smart-tab-mode " \\t" smart-tab)
+            (rainbow-mode)
+            (overwrite-mode " Ov" t)
+            (emacs-lisp-mode "Elisp" :major)
+	    (visual-line-mode)))
+    ))
 
 ; use the similiar functionality provided by smartparens
 ;(show-paren-mode t)
@@ -50,7 +56,7 @@
 ;;; undo-tree
 (local/package-install 'undo-tree)
 (use-package undo-tree
-  :diminish undo-tree-mode
+  :delight undo-tree-mode
   :init
   (progn
     (global-undo-tree-mode)

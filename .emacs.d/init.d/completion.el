@@ -2,7 +2,7 @@
 (local/package-install 'helm)
 (local/package-install 'helm-projectile)
 (use-package helm
-  :diminish helm-mode
+  :delight helm-mode
   :init
   (progn
     (require 'helm-config)
@@ -28,7 +28,7 @@
 ;;; should be loaded before auto complete so that they can work together
 (local/package-install 'yasnippet)
 (use-package yasnippet
-  :diminish yas-minor-mode
+  :delight yas-minor-mode
   :init
   (progn
     (yas-global-mode 1)))
@@ -38,7 +38,7 @@
 (local/package-install 'company)
 (local/package-install 'company-quickhelp)
 (use-package company
-  :diminish company-mode
+  :delight company-mode
   :init
   (progn
     (global-company-mode t))
