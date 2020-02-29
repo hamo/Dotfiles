@@ -2,7 +2,9 @@
   (tooltip-mode -1)
   (tool-bar-mode -1)
   (menu-bar-mode -1)
-  (scroll-bar-mode -1))
+  (scroll-bar-mode -1)
+  ;; Start maximised (cross-platf)
+  (add-hook 'window-setup-hook 'toggle-frame-maximized t))
 
 ;;; no startup messages
 (setq inhibit-splash-screen t)
