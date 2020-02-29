@@ -1,4 +1,3 @@
-(local/package-install 'smartparens)
 (use-package smartparens
   :delight smartparens-mode
   :config

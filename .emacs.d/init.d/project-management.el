@@ -1,4 +1,3 @@
-(local/package-install 'projectile)
 (use-package projectile
   :delight "Prjl"
   :init
@@ -9,7 +8,6 @@
     (setq projectile-enable-caching t))
 )
 
-(local/package-install 'magit)
 (use-package magit
   :config
   (progn

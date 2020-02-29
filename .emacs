@@ -2,9 +2,12 @@
 ;;; Commentary:
 ;;; Code:
 
-;; Enable ELPA
+;; Enable package
 (require 'package)
-(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
+(add-to-list 'package-archives
+	     '("melpa" . "https://melpa.org/packages/") t)
+(add-to-list 'package-archives
+             '("melpa-stable" . "https://stable.melpa.org/packages/") t)
 (package-initialize)
 (setq package-enable-at-startup nil)
 
@@ -24,12 +27,14 @@ If REPOSITORY is specified, use that."
 
 (local/package-install 'use-package)
 (require 'use-package)
+(setq use-package-always-ensure t)
+(setq use-package-verbose t)
+(setq use-package-compute-statistics t)
 
 (load "~/.emacs.d/init.d/basic.el")
 (load "~/.emacs.d/init.d/ui.el")
 (load "~/.emacs.d/init.d/project-management.el")
 (load "~/.emacs.d/init.d/completion.el")
-(load "~/.emacs.d/init.d/chat.el")
 (load "~/.emacs.d/init.d/modes.el")
 (load "~/.emacs.d/init.d/misc.el")
 

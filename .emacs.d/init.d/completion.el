@@ -1,5 +1,4 @@
 ;;; helm
-(local/package-install 'helm)
 (local/package-install 'helm-projectile)
 (use-package helm
   :delight helm-mode
@@ -26,7 +25,6 @@
 
 ;;; yasnippet
 ;;; should be loaded before auto complete so that they can work together
-(local/package-install 'yasnippet)
 (use-package yasnippet
   :delight yas-minor-mode
   :init
@@ -35,7 +33,6 @@
 
 ;;; company
 ;;; should be loaded after yasnippet so that they can work together
-(local/package-install 'company)
 (local/package-install 'company-quickhelp)
 (use-package company
   :delight company-mode

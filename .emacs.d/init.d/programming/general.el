@@ -1,10 +1,8 @@
-(local/package-install 'idle-highlight-mode)
 (use-package idle-highlight-mode
   :init
   (progn
     (add-hook 'prog-mode-hook 'idle-highlight-mode)))
 
-(local/package-install 'flycheck)
 (use-package flycheck
   :init
   (progn
@@ -17,15 +15,14 @@
           1 font-lock-warning-face t))))
 (add-hook 'prog-mode-hook 'highlight-font-lock-comment-annotations)
 
-(local/package-install 'rainbow-delimiters)
-(require 'rainbow-delimiters)
-(add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
+(use-package rainbow-delimiters
+  :init
+  (add-hook 'prog-mode-hook 'rainbow-delimiters-mode))
 
 (add-hook 'prog-mode-hook (lambda ()
 			    (setq show-trailing-whitespace t)
 			    (electric-indent-mode 1)))
 
-(local/package-install 'helm-gtags)
 (use-package helm-gtags
   :init
   (setq

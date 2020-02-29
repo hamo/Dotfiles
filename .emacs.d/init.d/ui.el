@@ -18,7 +18,6 @@
 (column-number-mode 1)
 
 ;;; Hide modes I care less about
-(local/package-install 'delight)
 (use-package delight
   :init
   (progn
@@ -45,18 +44,16 @@
 (load-theme 'solarized-dark t)
 
 ;;; http://nyan-mode.buildsomethingamazing.com/
-(local/package-install 'nyan-mode)
-(when window-system
-  (use-package nyan-mode
-    :init
-    (progn
-      (nyan-mode 1))
-    :config
-    (progn
-      (nyan-start-animation))))
+(use-package nyan-mode
+  :if window-system
+  :init
+  (progn
+    (nyan-mode 1))
+  :config
+  (progn
+    (nyan-start-animation)))
 
 ;;; undo-tree
-(local/package-install 'undo-tree)
 (use-package undo-tree
   :delight undo-tree-mode
   :init
