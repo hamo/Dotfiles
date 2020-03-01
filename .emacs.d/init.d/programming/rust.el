@@ -1,13 +1,13 @@
 (local/package-install 'cargo)
 
 (use-package rust-mode
-  :init
-  (progn
-    (add-hook 'rust-mode-hook 'cargo-minor-mode))
   :config
   (setq
    rust-format-on-save t
-   ))
+   )
+  :hook
+  (rust-mode . lsp)
+  (rust-mode . cargo-minor-mode))
 
 (use-package racer
   :init

@@ -32,8 +32,12 @@
    helm-gtags-pulse-at-cursor t
    helm-gtags-path-style 'root
    )
-)
+  )
 
+;;; common Language Server Protocol (lsp) Support
+(load "~/.emacs.d/init.d/programming/lsp.el")
+
+;;; language specified config
 (load "~/.emacs.d/init.d/programming/lisp.el")
 (load "~/.emacs.d/init.d/programming/c-family.el")
 (load "~/.emacs.d/init.d/programming/go.el")
