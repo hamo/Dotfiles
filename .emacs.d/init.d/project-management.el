@@ -1,5 +1,5 @@
 (use-package projectile
-  :delight "Prjl"
+  :delight " Prjl"
   :init
   (progn
     (projectile-global-mode))

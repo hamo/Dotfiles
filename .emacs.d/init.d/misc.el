@@ -7,5 +7,6 @@
     (show-smartparens-global-mode t)))
 
 (use-package which-key
+  :delight
   :config
   (which-key-mode))
