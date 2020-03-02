@@ -1,5 +1,5 @@
 (use-package projectile
-  :delight " Prjl"
+  :delight '(:eval (format " Prjl[%s]" (projectile-project-name)))
   :init
   (progn
     (projectile-global-mode))
