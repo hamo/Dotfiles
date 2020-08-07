@@ -89,6 +89,19 @@ source $ZSH/oh-my-zsh.sh
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/bin" ] ; then
+    export PATH="$HOME/bin:$PATH"
+fi
+
+if [ -d "$HOME/workspace/gopath" ]; then
+    export GOPATH="$HOME/workspace/gopath"
+fi
+
+if [ -d "$HOME/workspace/gopath/bin" ]; then
+	export PATH="$HOME/workspace/gopath/bin:$PATH"
+fi
+
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
