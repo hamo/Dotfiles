@@ -4,10 +4,9 @@
 
 ;; Enable package
 (require 'package)
-(add-to-list 'package-archives
-	     '("melpa" . "https://melpa.org/packages/") t)
-(add-to-list 'package-archives
-             '("melpa-stable" . "https://stable.melpa.org/packages/") t)
+(setq package-archives '(("gnu"   . "https://elpa.emacs-china.org/gnu/")
+                         ("melpa" . "https://elpa.emacs-china.org/melpa/")
+                         ("melpa-stable" . "https://elpa.emacs-china.org/melpa-stable/")))
 (package-initialize)
 (setq package-enable-at-startup nil)
 
