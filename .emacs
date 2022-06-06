@@ -4,9 +4,10 @@
 
 ;; Enable package
 (require 'package)
-(setq package-archives '(("gnu"   . "https://elpa.emacs-china.org/gnu/")
-                         ("melpa" . "https://elpa.emacs-china.org/melpa/")
-                         ("melpa-stable" . "https://elpa.emacs-china.org/melpa-stable/")))
+(setq package-archives '(("gnu"          . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")
+                         ("melpa"        . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
+                         ("melpa-stable" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/stable-melpa/")
+                         ("org"          . "http://mirrors.tuna.tsinghua.edu.cn/elpa/org/")))
 (package-initialize)
 (setq package-enable-at-startup nil)
 

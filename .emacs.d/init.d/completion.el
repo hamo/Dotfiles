@@ -1,5 +1,4 @@
 ;;; helm
-(local/package-install 'helm-projectile)
 (use-package helm
   :delight helm-mode
   :init

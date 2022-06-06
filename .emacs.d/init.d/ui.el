@@ -66,3 +66,21 @@
 (defadvice undo-tree-make-history-save-file-name
   (after undo-tree activate)
   (setq ad-return-value (concat ad-return-value ".gz")))
+
+(use-package treemacs
+  :ensure t
+  :defer t
+  :config
+  (progn
+    ;; The default width and height of the icons is 22 pixels. If you are
+    ;; using a Hi-DPI display, uncomment this to double the icon size.
+    ;;(treemacs-resize-icons 44)
+
+    (treemacs-follow-mode t)
+    (treemacs-filewatch-mode t)
+    (treemacs-fringe-indicator-mode 'always)
+
+    (treemacs-hide-gitignored-files-mode nil)))
+(use-package treemacs-icons-dired
+  :hook (dired-mode . treemacs-icons-dired-enable-once)
+  :ensure t)

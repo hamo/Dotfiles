@@ -4,3 +4,4 @@
 (local/package-install 'pkgbuild-mode)
 (local/package-install 'stumpwm-mode)
 (local/package-install 'dockerfile-mode)
+(local/package-install 'protobuf-mode)

@@ -23,17 +23,6 @@
 			    (setq show-trailing-whitespace t)
 			    (electric-indent-mode 1)))
 
-(use-package helm-gtags
-  :init
-  (setq
-   helm-gtags-ignore-case t
-   helm-gtags-auto-update t
-   helm-gtags-use-input-at-cursor t
-   helm-gtags-pulse-at-cursor t
-   helm-gtags-path-style 'root
-   )
-  )
-
 ;;; common Language Server Protocol (lsp) Support
 (load "~/.emacs.d/init.d/programming/lsp.el")
 
