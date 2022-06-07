@@ -5,3 +5,4 @@
 (local/package-install 'stumpwm-mode)
 (local/package-install 'dockerfile-mode)
 (local/package-install 'protobuf-mode)
+(local/package-install 'thrift)

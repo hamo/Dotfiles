@@ -23,6 +23,13 @@
 			    (setq show-trailing-whitespace t)
 			    (electric-indent-mode 1)))
 
+(use-package color-identifiers-mode
+  :delight
+  :ensure t
+  :init
+  (progn
+    (add-hook 'prog-mode-hook 'color-identifiers-mode)))
+
 ;;; common Language Server Protocol (lsp) Support
 (load "~/.emacs.d/init.d/programming/lsp.el")
 
