@@ -69,10 +69,10 @@ This function should only modify configuration layer settings."
      restclient
      shell
      terraform
-     ;; (shell :variables
-     ;;        shell-default-height 30
-     ;;        shell-default-position 'bottom)
-     ;; version-control
+     (ibuffer :variables
+              ibuffer-group-buffers-by 'projects)
+     dtrt-indent
+     systemd
      treemacs)
 
 
