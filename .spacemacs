@@ -54,6 +54,7 @@ This function should only modify configuration layer settings."
      solidity
      sql
      go
+     (java :variables java-backend 'lsp)
      rust
      protobuf
      (colors :variables
