@@ -74,6 +74,7 @@ This function should only modify configuration layer settings."
               ibuffer-group-buffers-by 'projects)
      dtrt-indent
      systemd
+     groovy
      treemacs)
 
 
