@@ -53,7 +53,7 @@ This function should only modify configuration layer settings."
      major-modes
      solidity
      sql
-     go
+     (go :variables go-format-before-save t)
      (java :variables java-backend 'lsp)
      rust
      protobuf
