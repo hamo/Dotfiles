@@ -53,6 +53,12 @@ This function should only modify configuration layer settings."
      major-modes
      solidity
      sql
+     (c-c++ :variables
+            c-c++-backend 'lsp-clangd
+            c-c++-enable-clang-format-on-save t
+            c-c++-enable-organize-includes-on-save t
+            c-c++-enable-auto-newline t
+            c-c++-adopt-subprojects t)
      (go :variables go-format-before-save t)
      (java :variables java-backend 'lsp)
      rust
