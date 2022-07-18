@@ -68,7 +68,9 @@ This function should only modify configuration layer settings."
      dap
      prettier
      restclient
-     shell
+     (shell :variables
+            shell-default-shell 'vterm
+            shell-default-term-shell "/bin/zsh")
      terraform
      (ibuffer :variables
               ibuffer-group-buffers-by 'projects)
