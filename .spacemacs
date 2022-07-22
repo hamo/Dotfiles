@@ -43,6 +43,12 @@ This function should only modify configuration layer settings."
      auto-completion
      templates
      better-defaults
+     (ranger :variables
+             ranger-override-dired 'ranger
+             ranger-show-preview t
+             ranger-show-hidden t
+             ranger-cleanup-on-disable t
+             ranger-max-preview-size 10)
      helpful
      unicode-fonts
      emacs-lisp
@@ -78,6 +84,7 @@ This function should only modify configuration layer settings."
             shell-default-shell 'vterm
             shell-default-term-shell "/bin/zsh")
      terraform
+     kubernetes
      (ibuffer :variables
               ibuffer-group-buffers-by 'projects)
      dtrt-indent
