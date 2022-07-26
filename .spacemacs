@@ -72,12 +72,18 @@ This function should only modify configuration layer settings."
      (colors :variables
              colors-colorize-identifiers 'variables
              colors-enable-nyan-cat-progress-bar t)
+     xkcd
      git
      helm
      lsp
      markdown
+     cmake
      org
      dap
+     imenu-list
+     tree-sitter
+     rebox
+     prodigy
      prettier
      restclient
      (shell :variables
