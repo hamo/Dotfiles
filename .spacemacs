@@ -62,9 +62,13 @@ This function should only modify configuration layer settings."
      eww
      elasticsearch
 
-     (go :variables go-format-before-save t)
+     (go :variables
+         go-format-before-save t
+         gofmt-command "goimports"
+         go-use-golangci-lint t)
      git
-     gtags
+     (gtags :variables
+            gtags-enable-by-default nil)
      groovy
      graphql
 
@@ -76,7 +80,8 @@ This function should only modify configuration layer settings."
               ibuffer-group-buffers-by 'projects)
 
      json
-     (java :variables java-backend 'lsp)
+     (java :variables
+           java-backend 'lsp)
 
      kubernetes
 
