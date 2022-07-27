@@ -95,6 +95,7 @@ This function should only modify configuration layer settings."
      protobuf
      prodigy
      prettier
+     python
 
      rust
      rebox
