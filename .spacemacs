@@ -72,8 +72,8 @@ This function should only modify configuration layer settings."
      (colors :variables
              colors-colorize-identifiers 'variables
              colors-enable-nyan-cat-progress-bar t)
-     xkcd
      git
+     version-control
      helm
      lsp
      markdown
@@ -86,6 +86,7 @@ This function should only modify configuration layer settings."
      prodigy
      prettier
      restclient
+     eww
      (shell :variables
             shell-default-shell 'vterm
             shell-default-term-shell "/bin/zsh")
