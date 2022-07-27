@@ -38,66 +38,90 @@ This function should only modify configuration layer settings."
      ;; Uncomment some layer names and press `SPC f e R' (Vim style) or
      ;; `M-m f e R' (Emacs style) to install them.
      ;; ----------------------------------------------------------------
-     spell-checking
-     syntax-checking
      auto-completion
-     templates
+
      better-defaults
-     (ranger :variables
-             ranger-override-dired 'ranger
-             ranger-show-preview t
-             ranger-show-hidden t
-             ranger-cleanup-on-disable t
-             ranger-max-preview-size 10)
-     helpful
-     unicode-fonts
-     emacs-lisp
-     json
-     yaml
-     shell-scripts
-     elasticsearch
-     major-modes
-     solidity
-     sql
+
+     copy-as-format
+     csv
+     cmake
+     (colors :variables
+             colors-colorize-identifiers 'variables
+             colors-enable-nyan-cat-progress-bar t)
      (c-c++ :variables
             c-c++-backend 'lsp-clangd
             c-c++-enable-clang-format-on-save t
             c-c++-enable-organize-includes-on-save t
             c-c++-enable-auto-newline t
             c-c++-adopt-subprojects t)
-     (go :variables go-format-before-save t)
-     (java :variables java-backend 'lsp)
-     rust
-     protobuf
-     (colors :variables
-             colors-colorize-identifiers 'variables
-             colors-enable-nyan-cat-progress-bar t)
-     git
-     version-control
-     helm
-     lsp
-     markdown
-     cmake
-     org
+
      dap
+     dtrt-indent
+
+     emacs-lisp
+     eww
+     elasticsearch
+
+     (go :variables go-format-before-save t)
+     git
+     gtags
+     groovy
+     graphql
+
+     helm
+     helpful
+
      imenu-list
-     tree-sitter
-     rebox
+     (ibuffer :variables
+              ibuffer-group-buffers-by 'projects)
+
+     json
+     (java :variables java-backend 'lsp)
+
+     kubernetes
+
+     lsp
+
+     major-modes
+     markdown
+
+     org
+
+     protobuf
      prodigy
      prettier
+
+     rust
+     rebox
      restclient
-     eww
+     (ranger :variables
+             ranger-override-dired 'ranger
+             ranger-show-preview t
+             ranger-show-hidden t
+             ranger-cleanup-on-disable t
+             ranger-max-preview-size 10)
+
+     spell-checking
+     syntax-checking
+     shell-scripts
+     solidity
+     sql
      (shell :variables
             shell-default-shell 'vterm
             shell-default-term-shell "/bin/zsh")
-     terraform
-     kubernetes
-     (ibuffer :variables
-              ibuffer-group-buffers-by 'projects)
-     dtrt-indent
      systemd
-     groovy
-     treemacs)
+
+     templates
+     tree-sitter
+     terraform
+     treemacs
+
+     unicode-fonts
+
+     version-control
+
+     yaml
+     )
 
 
    ;; List of additional packages that will be installed without being wrapped
