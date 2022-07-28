@@ -89,6 +89,8 @@ This function should only modify configuration layer settings."
 
      major-modes
      markdown
+     (multiple-cursors :variables
+                       multiple-cursors-backend 'mc)
 
      org
 
