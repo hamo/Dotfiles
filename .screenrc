@@ -1,9 +1,0 @@
-startup_message off
-
-backtick 1 60 60 $HOME/.screen.hardstatus
-hardstatus alwayslastline "%{.kc}%-w%{.kw}%n*%t%{-}%+w %= %1` %c %d/%m/%Y %D"
-
-encoding gbk utf8
-encoding utf8 utf8
-
-zmodem auto
