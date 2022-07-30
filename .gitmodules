@@ -1,7 +1,7 @@
 [submodule ".oh-my-zsh"]
 	path = .oh-my-zsh
 	url = https://github.com/ohmyzsh/ohmyzsh.git
-[submodule ".emacs.d"]
-	path = .emacs.d
-	url = https://github.com/syl20bnr/spacemacs
+[submodule ".spacemacs.d"]
+	path = .spacemacs.d
+	url = https://github.com/syl20bnr/spacemacs.git
 	branch = develop
