@@ -1,1 +1,1 @@
-.spacemacs.d
+.doom-emacs.d

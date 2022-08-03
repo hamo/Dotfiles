@@ -54,6 +54,7 @@ This function should only modify configuration layer settings."
             c-c++-enable-organize-includes-on-save t
             c-c++-enable-auto-newline t
             c-c++-adopt-subprojects t)
+     compleseus
 
      dap
      dtrt-indent
@@ -72,7 +73,6 @@ This function should only modify configuration layer settings."
      groovy
      graphql
 
-     helm
      helpful
 
      imenu-list
@@ -520,7 +520,7 @@ It should only modify the values of Spacemacs settings."
 
    ;; If non-nil, start an Emacs server if one is not already running.
    ;; (default nil)
-   dotspacemacs-enable-server t
+   dotspacemacs-enable-server nil
 
    ;; Set the emacs server socket location.
    ;; If nil, uses whatever the Emacs default is, otherwise a directory path
