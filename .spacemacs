@@ -54,9 +54,9 @@ This function should only modify configuration layer settings."
             c-c++-enable-organize-includes-on-save t
             c-c++-enable-auto-newline t
             c-c++-adopt-subprojects t)
-     compleseus
+     ;;compleseus
 
-     dap
+     ;;dap
      dtrt-indent
 
      emacs-lisp
@@ -68,11 +68,12 @@ This function should only modify configuration layer settings."
          gofmt-command "goimports"
          go-use-golangci-lint t)
      git
-     (gtags :variables
-            gtags-enable-by-default nil)
+     ;;(gtags :variables
+     ;;       gtags-enable-by-default nil)
      groovy
      graphql
 
+     helm
      helpful
 
      imenu-list
