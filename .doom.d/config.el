@@ -79,3 +79,5 @@
 (add-to-list 'initial-frame-alist '(fullscreen . maximized))
 
 (+global-word-wrap-mode +1)
+
+(add-hook! 'prog-mode-hook 'color-identifiers-mode)
