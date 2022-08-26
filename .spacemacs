@@ -94,6 +94,7 @@ This function should only modify configuration layer settings."
                        multiple-cursors-backend 'mc)
 
      org
+     osx
 
      protobuf
      prodigy
