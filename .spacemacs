@@ -629,7 +629,6 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
           ("org-cn"    . "http://mirrors.tuna.tsinghua.edu.cn/elpa/org/")
           ("gnu-cn"    . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")
           ("nongnu-cn" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/nongnu/")))
-  (setq native-comp-async-report-warnings-errors nil)
 )
 
 
