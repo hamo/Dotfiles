@@ -81,3 +81,6 @@
 (+global-word-wrap-mode +1)
 
 (add-hook! 'prog-mode-hook 'color-identifiers-mode)
+
+(after! emojify
+  (setq emojify-download-emojis-p nil))
