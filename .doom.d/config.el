@@ -76,6 +76,7 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
+(add-to-list 'default-frame-alist '(undecorated-round . t))
 (add-to-list 'initial-frame-alist '(fullscreen . maximized))
 
 (+global-word-wrap-mode +1)
