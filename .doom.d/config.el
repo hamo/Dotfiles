@@ -6,7 +6,7 @@
 
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets. It is optional.
-(setq user-full-name "Yang Bai"
+(setq user-full-name "Bai, Yang"
       user-mail-address "hamo.by@gmail.com")
 
 ;; Doom exposes five (optional) variables for controlling fonts in Doom:
@@ -23,7 +23,7 @@
 ;;
 ;;(setq doom-font (font-spec :family "Fira Code" :size 12 :weight 'semi-light)
 ;;      doom-variable-pitch-font (font-spec :family "Fira Sans" :size 13))
-(setq doom-font (font-spec :family "Source Code Pro" :size 18))
+(setq doom-font (font-spec :family "JetBrains Mono" :size 18))
 ;;
 ;; If you or Emacs can't find your font, use 'M-x describe-font' to look them
 ;; up, `M-x eval-region' to execute elisp code, and 'M-x doom/reload-font' to
@@ -85,3 +85,11 @@
 
 (after! emojify
   (setq emojify-download-emojis-p nil))
+
+(use-package nyan-mode
+  :ensure t
+  :hook (doom-modeline-mode . nyan-mode)
+  :config
+  (setq
+   nyan-animate-nyancat t
+   nyan-wavy-trail t))

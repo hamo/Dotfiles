@@ -50,3 +50,4 @@
 ;(unpin! t)
 
 (package! color-identifiers-mode)
+(package! nyan-mode)
