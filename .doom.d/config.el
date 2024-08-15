@@ -87,7 +87,6 @@
   (setq emojify-download-emojis-p nil))
 
 (use-package nyan-mode
-  :ensure t
   :hook (doom-modeline-mode . nyan-mode)
   :config
   (setq
