@@ -68,7 +68,7 @@ DISABLE_AUTO_UPDATE="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git brew thefuck)
+plugins=(git brew thefuck golang iterm2 nvm rust)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -92,14 +92,6 @@ source $ZSH/oh-my-zsh.sh
 # set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/bin" ] ; then
     export PATH="$HOME/bin:$PATH"
-fi
-
-if [ -d "$HOME/workspace/gopath" ]; then
-    export GOPATH="$HOME/workspace/gopath"
-fi
-
-if [ -d "$HOME/workspace/gopath/bin" ]; then
-	export PATH="$HOME/workspace/gopath/bin:$PATH"
 fi
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
